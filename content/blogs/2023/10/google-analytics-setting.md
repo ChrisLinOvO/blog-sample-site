@@ -4,7 +4,7 @@ date: 2023-10-25T22:00:00+08:00
 draft: false
 
 # post thumb
-# image: "images/post/post-4.jpg"
+image: "images/post/analytics-event-logo.jpg"
 
 # meta description
 description: "手把手教學 GA4 事件設定"
