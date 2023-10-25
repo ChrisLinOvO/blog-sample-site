@@ -11,7 +11,7 @@ description: "this is meta description"
 
 # taxonomies
 categories:
-  - "Python"
+  - "Portfolio"
 tags:
   - "Photos"
   - "Game"

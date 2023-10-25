@@ -6,6 +6,13 @@
   }
 }
 
+.nav-link-mobile {
+  color: $text-color-dark !important;
+  &:hover{
+    color: $primary-color !important;
+  }
+}
+
 .navbar-white .navbar-nav .nav-link {
   color: $text-color-dark;
   &:hover{

@@ -4,17 +4,18 @@ date: 2019-10-29T10:07:47+06:00
 draft: true
 
 # post thumb
-image: "images/post/post-2.jpg"
+image: "images/featured-post/post-3.jpg"
 
 # meta description
 description: "this is meta description"
 
 # taxonomies
 categories:
-  - "Go Language"
+  - "Notes"
 tags:
   - "Photos"
-  - "HTML"
+  - "Game"
+  - "React"
   - "Python"
   - "New"
 
@@ -80,7 +81,7 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nihil enim maxime 
 
 <hr>
 
-##### List
+##### Ordered List
 
 1. List item
 2. List item
@@ -95,6 +96,7 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nihil enim maxime 
 - List item
 - List item
 - List item
+
 <hr>
 
 ##### Code and Syntax Highlighting

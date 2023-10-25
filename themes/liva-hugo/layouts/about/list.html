@@ -5,35 +5,110 @@
     <div class="row">
       <div class="col-lg-8 mx-auto text-center">
         {{ if .Params.Image }}
-        <img src="{{ .Params.Image | absURL }}" alt="" class="img-fluid d-block mx-auto rounded-circle mb-4">
+        <img
+          src="{{ .Params.Image | absURL }}"
+          alt=""
+          class="img-fluid author-thumb-about d-block mx-auto rounded-circle mb-4"
+        />
         {{ end }}
         <h4 class="widget-title">{{ .Title | markdownify }}</h4>
-        <div class="content">
-          {{ .Content }}
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+        <div class="content">{{ .Content }}</div>
+        <h4 class="widget-title">Experience</h4>
+        <ul class="timeline">
+          <!-- Item 1 -->
+          <li>
+            <div class="direction-l">
+              <div class="flag-wrapper">
+                <span class="hexa"></span>
+                <span class="time-wrapper"
+                  ><span class="time">2022.04 ~ 2023.10</span></span
+                >
+              </div>
+              <div class="desc">
+                <h5>軟體工程師 (React 前端)</h5>
+                <br />
+                任職於：資拓宏宇
+                <br />
+                工作地點：駐點雅虎 (遠端)
+              </div>
+            </div>
+          </li>
 
-{{ if .Site.Data.gallery.enable }}
-{{ with .Site.Data.gallery }}
-<section>
-  <div class="container-fluid px-0">
-    <div class="text-center">
-      <h4 class="widget-title">My Gallery</h4>
-    </div>
-    <div class="row no-gutters">
-      {{ range .gallery }}
-      <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-        <a href="{{ .image | absURL}}" class="venobox" data-gall="gallery"><img class="img-fluid w-100"
-            src="{{ .image | absURL}}" alt=""></a>
+          <!-- Item 2 -->
+          <li>
+            <div class="direction-r">
+              <div class="flag-wrapper">
+                <span class="hexa"></span>
+                <span class="time-wrapper"
+                  ><span class="time">2020.09 ~ 2022.02</span></span
+                >
+              </div>
+              <div class="desc">
+                <h5>軟體工程師 (React 前端)</h5>
+                <br />
+                任職於：易控智慧生活科技
+                <br />
+                工作地點：台灣新北市
+              </div>
+            </div>
+          </li>
+
+          <!-- Item 3 -->
+          <li>
+            <div class="direction-l">
+              <div class="flag-wrapper">
+                <span class="hexa"></span>
+                <span class="time-wrapper"
+                  ><span class="time">2020.03 ~ 2022.07</span></span
+                >
+              </div>
+              <div class="desc">
+                <h5>資策會</h5>
+                <br />
+                前端工程師養成班
+              </div>
+            </div>
+          </li>
+
+          <!-- Item 4 -->
+          <li>
+            <div class="direction-r">
+              <div class="flag-wrapper">
+                <span class="hexa"></span>
+                <span class="time-wrapper"
+                  ><span class="time">2018.04 ~ 2019.07</span></span
+                >
+              </div>
+              <div class="desc">
+                <h5>材料分析工程師</h5>
+                <br />
+                任職於：宜特科技
+                <br />
+                工作地點：台灣新竹市
+              </div>
+            </div>
+          </li>
+
+          <!-- Item 5 -->
+          <li>
+            <div class="direction-l">
+              <div class="flag-wrapper">
+                <span class="hexa"></span>
+                <span class="time-wrapper"
+                  ><span class="time">2014.06 ~ 2017.06</span></span
+                >
+              </div>
+              <div class="desc">
+                <h5>龍華科技大學</h5>
+                <br />
+                化工與材料工程學系
+              </div>
+            </div>
+          </li>
+        </ul>
       </div>
-      {{ end }}
     </div>
   </div>
 </section>
-{{ end }}
-{{ end }}
 
 {{ end }}

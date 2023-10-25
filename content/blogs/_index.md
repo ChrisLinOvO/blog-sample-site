@@ -1,6 +1,6 @@
 ---
 title: "blog"
-date: 2019-10-29T13:49:23+06:00
+date: 2023-10-24
 draft: false
 
 # meta description

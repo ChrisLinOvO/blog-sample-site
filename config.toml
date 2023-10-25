@@ -45,9 +45,14 @@ URL = "plugins/search/search.js"
 
 # main menu
 [[menu.main]]
-name = "About"
+name = "About Me"
 URL = "about/"
 weight = 1
+
+[[menu.main]]
+name = "Old Website"
+URL = "https://chrislinovo.github.io/blog/"
+weight = 2
 
 # footer menu
 [[menu.footer]]
@@ -60,8 +65,8 @@ weight = 1
 logo = "images/logo.png"
 home = "Home"
 # Meta data
-description = "This is meta description"
-author = "Themefisher"
+description = "I am a software engineer with more than 3 years of experience."
+author = "Chris"
 # Google Analitycs
 googleAnalitycsID = "Your ID"
 # Contact Information
@@ -92,29 +97,14 @@ content = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam non
 enable = true
 expire_days = 2
 
-
 ############################# social site ########################
-# [[params.social]]
-# title = "facebook"
-# icon = "ti-facebook" # themify icon : https://themify.me/themify-icons
-# link = "#"
-
-# [[params.social]]
-# title = "twitter"
-# icon = "ti-twitter-alt" # themify icon : https://themify.me/themify-icons
-# link = "#"
-
-# [[params.social]]
-# title = "instagram"
-# icon = "ti-instagram" # themify icon : https://themify.me/themify-icons
-# link = "#"
 
 [[params.social]]
 title = "github"
 icon = "ti-github" # themify icon : https://themify.me/themify-icons
 link = "https://github.com/ChrisLinOvO"
 
-# [[params.social]]
-# title = "linkedin"
-# icon = "ti-linkedin" # themify icon : https://themify.me/themify-icons
-# link = "#"
+[[params.social]]
+title = "email"
+icon = "ti-email"
+link = "mailto:qq2120621@gmail.com"
