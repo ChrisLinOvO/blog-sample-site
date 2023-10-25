@@ -15,6 +15,7 @@ categories:
   - "Notes"
 tags:
   - "GA"
+  - "Google"
 
 # post type
 type: "post"
@@ -26,7 +27,7 @@ type: "post"
 
 想查看使用者對於我的網站網站互動
 
-### 開始添加 Google Analytics？
+### 開始添加 Google Analytics
 
 ---
 
