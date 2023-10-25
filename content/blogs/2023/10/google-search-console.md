@@ -4,7 +4,7 @@ date: 2023-10-25T10:00:00+08:00
 draft: false
 
 # post thumb
-image: "images/post/google-search-logo.jpg"
+image: "images/post/google-search-logo-1.jpg"
 
 # meta description
 description: "想要文章出現在 Google，快來加 Google Search Console 吧!!"

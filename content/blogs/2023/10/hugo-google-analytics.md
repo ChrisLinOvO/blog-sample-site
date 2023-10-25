@@ -1,14 +1,14 @@
 ---
-title: "添加 Google Analytics"
+title: "Hugo 添加 Google Analytics"
 date: 2023-10-25
 draft: false
 
 
 # post thumb
-image: "images/post/analytics-logo.jpg"
+image: "images/post/hugo-ga-logo.jpg"
 
 # meta description
-description: "設定 GA4 教學"
+description: "Hugo 主題設定 GA4 教學"
 
 # taxonomies
 categories:
@@ -16,6 +16,7 @@ categories:
 tags:
   - "GA"
   - "Google"
+  - "Hugo"
 
 # post type
 type: "post"
@@ -73,7 +74,7 @@ type: "post"
 
 > 如果是下載比較新版的主題，要把舊版 GA 設定刪除，需在`head.html`原本設定的 GA 以及`config.toml`裡面`googleAnalitycsID`移除
 
-#### 步驟 7：確認 GA 與個人網站連結成功
+#### 步驟 8：確認 GA 與個人網站連結成功
 
 ![image](../../../../images/post/post-3-7.jpg)
 
