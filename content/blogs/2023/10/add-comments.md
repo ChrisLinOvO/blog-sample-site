@@ -11,7 +11,7 @@ description: "想要留言給作者嗎？在 Hugo 上使用 Utterances"
 
 # taxonomies
 categories:
-  - "Notes"
+  - "Tech"
 tags:
   - "Hugo"  
   - "Git"

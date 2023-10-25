@@ -12,7 +12,7 @@ description: "設定 GA4 教學"
 
 # taxonomies
 categories:
-  - "Notes"
+  - "Tech"
 tags:
   - "GA"
   - "Google"
@@ -71,7 +71,7 @@ type: "post"
 
 ![image](../../../../images/post/post-3-6.jpg)
 
-> 如果是下載比較新版的主題，要把舊版 GA 設定刪除，`config.toml`裡面`googleAnalitycsID`移除。
+> 如果是下載比較新版的主題，要把舊版 GA 設定刪除，需在`head.html`原本設定的 GA 以及`config.toml`裡面`googleAnalitycsID`移除
 
 #### 步驟 7：確認 GA 與個人網站連結成功
 

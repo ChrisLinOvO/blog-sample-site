@@ -1,6 +1,6 @@
 ---
 title: "添加 Google Search Console"
-date: 2023-10-25T10:07:47+08:00
+date: 2023-10-25T10:00:00+08:00
 draft: false
 
 # post thumb
@@ -11,7 +11,7 @@ description: "想要文章出現在 Google，快來加 Google Search Console 吧
 
 # taxonomies
 categories:
-  - "Notes"
+  - "Tech"
 tags:
   - "Google"
 

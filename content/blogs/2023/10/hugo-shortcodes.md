@@ -1,40 +1,27 @@
 ---
-title: "How To Use Checklists To Improve Your UX"
-date: 2019-10-29T10:07:47+06:00
+title: "學習 Hugo ShortCodes"
+date: 2023-10-25T12:00:00+08:00
 draft: true
 
 # post thumb
 image: "images/post/post-2.jpg"
 
 # meta description
-description: "this is meta description"
+description: "裡面有一些 ShortCodes 範例，持續更新中..."
 
 # taxonomies
 categories:
   - "Notes"
 tags:
-  - "Photos"
-  - "HTML"
-  - "Python"
-  - "New"
+  - "Hugo"
 
 # post type
 type: "post"
 ---
 
-# Heading 1
+### 以下是我學習 ShortCodes 筆記
 
-## Heading 2
-
-### Heading 3
-
-#### Heading 4
-
-##### Heading 5
-
-###### Heading 6
-
-<hr>
+---
 
 ##### Emphasis
 

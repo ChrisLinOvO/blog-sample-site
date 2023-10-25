@@ -11,7 +11,7 @@ description: "之前用的 Jekyll 主題創作者沒在維護，現在版本的 
 
 # taxonomies
 categories:
-  - "Notes"
+  - "Tech"
 tags:
   - "Hugo"
   - "Git"
