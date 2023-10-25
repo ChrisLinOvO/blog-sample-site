@@ -44,6 +44,10 @@
   background: transparent;
   border-right: 1px solid $border-color;
   border-left: 1px solid $border-color;
+  color: $text-color-dark !important;
+  &:hover{
+    color: $primary-color !important;
+  }
 }
 
 .search-wrapper {
@@ -85,4 +89,8 @@
   background: transparent;
   page-break-after: 10px;
   font-size: 20px;
+  color: $text-color-dark !important;
+  &:hover{
+    color: $primary-color !important;
+  }
 }
