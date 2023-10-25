@@ -1,5 +1,5 @@
 ---
-title: "如何在 Google Analytics 4 設定事件"
+title: "如何在 Google Analytics 4 事件設定"
 date: 2023-10-25T22:00:00+08:00
 draft: false
 

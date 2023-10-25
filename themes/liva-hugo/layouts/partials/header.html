@@ -29,13 +29,13 @@
             </a>
             <div class="dropdown-menu">
               {{ range .Children }}
-              <a class="dropdown-item" href="{{ .URL | absURL }}">{{ .Name }}</a>
+              <a class="dropdown-item" href="{{ .URL | absURL }}"{{ if eq .Name "Old Website" }} target="_blank"{{ end }}>{{ .Name }}</a>
               {{ end }}
             </div>
           </li>
           {{ else }}
           <li class="nav-item">
-            <a class="nav-link" target="_blank" href="{{ .URL | absURL }}">{{ .Name }}</a>
+            <a class="nav-link" href="{{ .URL | absURL }}"{{ if eq .Name "Old Website" }} target="_blank"{{ end }}>{{ .Name }}</a>
           </li>
           {{ end }}
           {{ end }}
