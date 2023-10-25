@@ -72,6 +72,10 @@ type: "post"
 
 > 如果是下載比較新版的主題，要把舊版 GA 設定刪除，`config.toml`裡面`googleAnalitycsID`移除。
 
+#### 步驟 7：確認 GA 與個人網站連結成功
+
+![image](../../../../images/post/post-3-7.jpg)
+
 ### 結語
 
 ---
