@@ -19,7 +19,7 @@ tags:
 # post type
 type: "post"
 
-keywords: ["Hugo關鍵字1", "Hugo關鍵字2", "Hugo關鍵字3"]
+keywords: ["Hugo關鍵字1", "Hugo關鍵字2", "Hugo關鍵字3", "Hugo關鍵字4"]
 ---
 
 ### 前言
