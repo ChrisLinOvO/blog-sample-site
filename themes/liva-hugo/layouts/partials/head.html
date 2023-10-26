@@ -9,6 +9,10 @@
     
   <!-- theme meta -->
   <meta name="theme-name" content="liva-hugo" />
+
+  {{ with .Params.keywords }}
+  <meta name="keywords" content="{{ delimit . ", " }}">
+  {{ end }}
   
   {{ hugo.Generator }}
 
