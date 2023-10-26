@@ -18,6 +18,8 @@ tags:
 
 # post type
 type: "post"
+
+keywords: ["Hugo關鍵字1", "Hugo關鍵字2", "Hugo關鍵字3"]
 ---
 
 ### 前言
