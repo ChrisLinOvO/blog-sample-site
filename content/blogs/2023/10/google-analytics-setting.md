@@ -70,6 +70,22 @@ type: "post"
 
 ![image](../../../../images/post/post-6-6.jpg)
 
+### 進階實作-如何在程式中自訂事件發送給GA
+
+---
+
+在程式碼加入 `gtag event`，這邊我用點擊`Know More`按鈕作為 Demo，只要在程式中添加以下圖是代碼就可以發事件給 GA。
+
+> 當使用者點擊具有 "knowMoreButton" ID 的按鈕時，這段 JavaScript 代碼會觸發一個自定義事件，並將事件數據發送到 Google Analytics。這個事件包括事件名稱（"know_more_button_click"）、事件類別（"按鈕點擊"）、事件標籤（"點擊了更多按鈕"）和一個可選的值（1，用於量化事件的價值）。這有助於跟踪 Google Analytics 中使用者點擊 "Know More" 按鈕的互動。
+
+![image](../../../../images/post/post-6-7.jpg)
+
+![image](../../../../images/post/post-6-8.jpg)
+
+這時在個人網頁觸發幾次`Know More`事件，可以在 Google Analytics 即時報表上看到數據了。
+
+![image](../../../../images/post/post-6-9.jpg)
+
 ### 結語
 
 ---
