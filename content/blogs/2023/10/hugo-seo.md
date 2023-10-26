@@ -65,7 +65,11 @@ keywords:
 
 > `{{ with .Params.keywords }}`這是一個條件語句，检查文章 Markdown 文件中是否存在`keywords`字段 ，然而`delimit`用逗號和空格分隔成一個字符串。
 
-#### 步驟 3：打包後，看 html 結果
+#### 步驟 3：打包後看 html 結果，這樣就完成頁面關鍵字設定
+
+```
+<meta name="keywords" content="Hugo SEO, 靜態網頁SEO, SEO最佳化建議, 搜尋引擎優化, 網站排名">
+```
 
 ### 結語
 
