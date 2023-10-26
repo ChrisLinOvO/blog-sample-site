@@ -1,10 +1,6 @@
 ---
 title: "使用 Hugo 在 GitHub 上架設個人網站"
 date: 2023-10-23
-keywords:
-  - "Hugo關鍵字11"
-  - "Hugo關鍵字22"
-  - "Hugo關鍵字44"
 draft: false
 
 # post thumb
