@@ -2,6 +2,7 @@
 title: "使用 Hugo 在 GitHub 上架設個人網站"
 date: 2023-10-23
 draft: false
+keywords: ["Hugo關鍵字1", "Hugo關鍵字2", "Hugo關鍵字3", "Hugo關鍵字4"]
 
 # post thumb
 image: "images/post/hugo-logo.svg"
@@ -18,8 +19,6 @@ tags:
 
 # post type
 type: "post"
-
-keywords: ["Hugo關鍵字1", "Hugo關鍵字2", "Hugo關鍵字3", "Hugo關鍵字4"]
 ---
 
 ### 前言
