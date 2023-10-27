@@ -71,6 +71,58 @@ keywords:
 <meta name="keywords" content="Hugo SEO, 靜態網頁SEO, SEO最佳化建議, 搜尋引擎優化, 網站排名">
 ```
 
+### 設定頁面標題
+
+---
+
+#### 步驟 1：在該篇文章 Markdown 添加 title
+
+```
+title: "Hugo SEO（搜尋引擎優化）實踐"
+```
+
+#### 步驟 2：添加 title 標籤
+
+這邊我是加在`themes/layouts/partials/head.html`裏面。
+
+- **這段意思是 先檢查是否在該頁面有設定標題，如果沒有會用整個網站的標題參數**
+
+```
+<title>{{ with .Title }}{{ . }}{{ else }}{{ .Site.Title }}{{ end }}</title>
+```
+
+#### 步驟 3：打包後看 html 結果，這樣就完成頁面標題設定
+
+```
+<title>Hugo SEO（搜尋引擎優化）實踐</title>
+```
+
+### 設定頁面描述
+
+---
+
+#### 步驟 1：在該篇文章 Markdown 添加 description
+
+```
+description: "Hugo 產生靜態網頁的 SEO 最佳化建議"
+```
+
+#### 步驟 2：添加 meta 標籤
+
+這邊我是加在`themes/layouts/partials/head.html`裏面。
+
+- **這段意思是同頁面標題**
+
+```
+<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}">
+```
+
+#### 步驟 3：打包後看 html 結果，這樣就完成頁面描述設定
+
+```
+<meta name="description" content="Hugo 產生靜態網頁的 SEO 最佳化建議">
+```
+
 ### 結語
 
 ---
