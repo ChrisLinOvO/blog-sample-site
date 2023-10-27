@@ -85,10 +85,10 @@ title: "Hugo SEO（搜尋引擎優化）實踐"
 
 這邊我是加在`themes/layouts/partials/head.html`裏面。
 
-- **這段意思是 先檢查是否在該頁面有設定標題，如果沒有會用整個網站的標題參數**
+- **這段意思是：如果當前頁面不是首頁，則會在標題中包括網站的名稱，以區分首頁和其他頁面的標題顯示方式。如果當前頁面是首頁，則只顯示頁面的標題，不包括網站名稱。**
 
 ```
-<title>{{ with .Title }}{{ . }}{{ else }}{{ .Site.Title }}{{ end }}</title>
+<title>{{ $isHomePage := eq .Title .Site.Title }}{{ .Title }}{{ if eq $isHomePage false }} - {{ .Site.Title }}{{ end }}</title>
 ```
 
 #### 步驟 3：打包後看 html 結果，這樣就完成頁面標題設定
