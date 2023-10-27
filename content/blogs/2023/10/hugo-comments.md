@@ -30,7 +30,7 @@ Utterances 是一種基於 GitHub Issues 的評論系統。它允許在靜態網
 
 ---
 
-#### 步驟 1：到[安裝頁面](https://github.com/apps/utterances)後點選 Install
+#### 步驟 1：到{{< target-blank url="https://github.com/apps/utterances" >}}安裝頁面{{< /target-blank >}}後點選 Install
 
 ![image](../../../../images/post/post-2-1.jpg)
 
@@ -40,7 +40,7 @@ Utterances 是一種基於 GitHub Issues 的評論系統。它允許在靜態網
 
 #### 步驟 3：添加配置至程式碼中
 
-可由[官網](https://utteranc.es/)進行配置
+可由{{< target-blank url="https://utteranc.es/" >}}官網{{< /target-blank >}}進行配置
 
 ##### 設置 repo 名稱
 

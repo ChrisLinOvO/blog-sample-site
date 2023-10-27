@@ -29,7 +29,7 @@ type: "post"
 
 ---
 
-#### 步驟 1：點擊[Google Search Console](https://search.google.com/search-console/about)，後按下「立即開始」，就可以開始設定
+#### 步驟 1：點擊 {{< target-blank url="https://search.google.com/search-console/about" >}}Google Search Console{{< /target-blank >}}，後按下「立即開始」，就可以開始設定
 
 #### 步驟 2：選取資源類型
 

@@ -32,7 +32,7 @@ type: "post"
 
 ---
 
-#### 步驟 1：點擊[Google Analytics](https://analytics.google.com/analytics/web/provision/#/provision)，後按下「開始測量」，就可以開始設定
+#### 步驟 1：點擊 {{< target-blank url="https://analytics.google.com/analytics/web/provision/#/provision" >}}Google Analytics{{< /target-blank >}}，後按下「開始測量」，就可以開始設定
 
 #### 步驟 2：建立帳戶
 

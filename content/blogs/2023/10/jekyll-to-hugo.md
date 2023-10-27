@@ -75,7 +75,7 @@ brew install --build-from-source hugo
 
 #### 步驟 2：匯入主題
 
-這邊我是使用 [liva-hugo](https://github.com/gethugothemes/liva-hugo) 主題。
+這邊我是使用 {{< target-blank url="https://github.com/gethugothemes/liva-hugo" >}}liva-hugo{{< /target-blank >}} 主題。
 
 這裡示範下載 git 上面 zip，下載解壓縮後，裡面有一個資料夾叫`exampleSite`，把他拉出來放置桌面或其他想存放的路徑。
 
