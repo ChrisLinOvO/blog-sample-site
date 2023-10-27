@@ -1,5 +1,5 @@
 ---
-title: "解決 Hugo Markdown 無法另開網頁問題"
+title: "解決 Hugo Markdown 連結無法另開網頁問題"
 date: 2023-10-27
 draft: false
 
@@ -68,4 +68,4 @@ type: "post"
 
 ---
 
-看完以上內容，可以完成解決 Hugo Markdown 無法另開網頁問題，如果以上有問題歡迎討論。
+看完以上內容，可以完成解決 Hugo Markdown 連結無法另開網頁問題，如果以上有問題歡迎討論。
