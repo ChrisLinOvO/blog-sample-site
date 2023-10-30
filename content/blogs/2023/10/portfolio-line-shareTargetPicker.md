@@ -1,20 +1,19 @@
 ---
-title: "Heroku 轉移至 Fly.io "
-date: 2023-10-29
+title: "Line LIFF ShareTargetPicker"
+date: 2023-10-30
 draft: true
 
 # post thumb
 image: "images/post/fly.io-logo.jpg"
 
 # meta description
-description: "Heroku 轉移至 Fly.io 筆記"
+description: "Line 分享當前頁面給好友"
 
 # taxonomies
 categories:
-  - "Notes"
+  - "Portfolio"
 tags:
-  - "Heroku"
-  - "Fly.io"
+  - "Line"
 
 # post type
 type: "post"
@@ -24,7 +23,7 @@ type: "post"
 
 ---
 
-由於 Heroku 取消了免費的服務...個人作品都壞掉了，因此換成 Fly.io 部署
+之前在前公司有用到 Line shareTargetPicker API 的應用，用來發送訪客 QR code 給 Line 好友，這邊做一個簡單 Demo
 
 ### 在 Ｆly.io 建立專案
 

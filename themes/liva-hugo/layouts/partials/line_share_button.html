@@ -52,6 +52,8 @@
           // 獲取當前網頁的 URL
           var currentURL = window.location.href;
 
+          var sharedText = `來自${getUserName()}的分享🎉`;
+
           // 使用 LINE 分享功能分享 URL
           if (isMobile) {
             // 如果是手機，使用 LINE LIFF
@@ -63,13 +65,15 @@
                     liff.login(); // 如果用戶未登錄，提示用戶登錄
                   }
                   // 使用 liff.shareTargetPicker 分享 URL 給 LINE 好友
-                //   window.location.href = "https://lineit.line.me/share/ui?url=" + currentURL;
-
                   liff.shareTargetPicker([
+                    {
+                      type: "text",
+                      text: sharedText,
+                    },
                     {
                       type: "url",
                       title: "分享的網頁",
-                      url: "https://lineit.line.me/share/ui?url=" + currentURL,
+                      url: `https://lineit.line.me/share/ui?url=${currentURL}`,
                     },
                   ]);
                 })
@@ -79,7 +83,7 @@
             }
           } else {
             // 如果是網頁，使用 LINE Web Share Button
-            window.open("https://lineit.line.me/share/ui?url=" + currentURL);
+            window.open(`https://lineit.line.me/share/ui?url=${currentURL}`);
           }
         });
       }
