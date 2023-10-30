@@ -7,7 +7,7 @@ draft: false
 image: "images/author-1.jpg"
 
 # meta description
-description: "this is meta description"
+description: "自介和工作經歷"
 
 # type
 type: "about"
