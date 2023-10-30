@@ -29,7 +29,7 @@
     <!-- 分享按鈕 -->
     <div id="lineShareButton">
       <button
-        onclick="shareToLINE();"
+        onclick="shareToLINE()"
         style="background: none; border: none; cursor: pointer"
       >
         <img src="/images/line-icon.png" alt="LINE APP 圖片" />
@@ -81,11 +81,6 @@
           }
         });
       }
-
-      var shareButton = document.getElementById("lineShareButton");
-      shareButton.addEventListener("click", function () {
-        shareToLINE();
-      });
     </script>
   </body>
 </html>
