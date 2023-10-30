@@ -12,65 +12,76 @@
         cursor: pointer;
         display: flex;
         align-items: center;
-    }
+        z-index: 9999; /* 將 z-index 設置為一個足夠高的值 */
+      }
 
-    #lineShareButton img {
+      #lineShareButton img {
         width: 60px; /* 調整圖片寬度 */
         height: auto;
-    }
+      }
 
-    #lineShareButton p {
+      #lineShareButton p {
         margin: 0; /* 清除預設邊距 */
-    }
+      }
     </style>
   </head>
   <body>
     <!-- 分享按鈕 -->
     <div id="lineShareButton">
-      <a href="javascript:void(0);" onclick="shareToLINE();">
-        <img src="images/LINE_Brand_icon.png" alt="LINE APP 圖片" />
+      <button
+        onclick="shareToLINE();"
+        style="background: none; border: none; cursor: pointer"
+      >
+        <img src="/images/line-icon.png" alt="LINE APP 圖片" />
         <p>分享好友</p>
-      </a>
+      </button>
     </div>
 
     <script>
-      // 檢查用戶訪問設備，如果是手機，啟用 LINE LIFF
-      var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-        navigator.userAgent
-      );
+      function shareToLINE() {
+        // 檢查用戶訪問設備，如果是手機，啟用 LINE LIFF
+        var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+          navigator.userAgent
+        );
 
-      // 獲取分享按鈕元素
-      var shareButton = document.getElementById("lineShareButton");
+        // 獲取分享按鈕元素
+        var shareButton = document.getElementById("lineShareButton");
 
-      // 添加點擊事件監聽器
-      shareButton.addEventListener("click", function () {
-        // 獲取當前網頁的 URL
-        var currentURL = window.location.href;
+        // 添加點擊事件監聽器
+        shareButton.addEventListener("click", function () {
+          // 獲取當前網頁的 URL
+          var currentURL = window.location.href;
 
-        // 使用 LINE 分享功能分享 URL
-        if (isMobile) {
-          // 如果是手機，使用 LINE LIFF
-          if (typeof liff !== "undefined") {
-            liff
-              .init({ liffId: "2001397246-jbLPM3xw" })
-              .then(function () {
-                // 使用 liff.shareTargetPicker 分享 URL 給 LINE 好友
-                liff.shareTargetPicker([
-                  {
-                    type: "url",
-                    title: "分享的網頁",
-                    url: currentURL,
-                  },
-                ]);
-              })
-              .catch(function (error) {
-                console.error(error);
-              });
+          // 使用 LINE 分享功能分享 URL
+          if (isMobile) {
+            // 如果是手機，使用 LINE LIFF
+            if (typeof liff !== "undefined") {
+              liff
+                .init({ liffId: "2001397246-jbLPM3xw" })
+                .then(function () {
+                  // 使用 liff.shareTargetPicker 分享 URL 給 LINE 好友
+                  liff.shareTargetPicker([
+                    {
+                      type: "url",
+                      title: "分享的網頁",
+                      url: currentURL,
+                    },
+                  ]);
+                })
+                .catch(function (error) {
+                  console.error(error);
+                });
+            }
+          } else {
+            // 如果是網頁，使用 LINE Web Share Button
+            window.open("https://lineit.line.me/share/ui?url=" + currentURL);
           }
-        } else {
-          // 如果是網頁，使用 LINE Web Share Button
-          window.open("https://lineit.line.me/share/ui?url=" + currentURL);
-        }
+        });
+      }
+
+      var shareButton = document.getElementById("lineShareButton");
+      shareButton.addEventListener("click", function () {
+        shareToLINE();
       });
     </script>
   </body>
