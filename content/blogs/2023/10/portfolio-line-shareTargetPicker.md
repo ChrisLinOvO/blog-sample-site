@@ -1,7 +1,7 @@
 ---
 title: "Line LIFF ShareTargetPicker"
 date: 2023-10-30
-draft: true
+draft: false
 
 # post thumb
 image: "images/post/fly.io-logo.jpg"
@@ -25,7 +25,7 @@ type: "post"
 
 之前在前公司有用到 Line shareTargetPicker API 的應用，用來發送訪客 QR code 給 Line 好友，這邊做一個簡單 Demo，單純轉發當前 URL 給好友。
 
-### 建立 LIFF
+### Line LIFF ShareTargetPicker 教學
 
 ---
 
@@ -35,61 +35,41 @@ type: "post"
 
 ![image](../../../../images/post/post-10-1.jpg)
 
-這裡教學以 macOS 為例，可參考 {{< target-blank url="https://fly.io/docs/hands-on/install-flyctl/#macos" >}}官網{{< /target-blank >}} 。
+#### 步驟 2：建立 LIFF
 
-```
-brew install flyctl
-```
+這時點選頁籤`LIFF`按下`Add`。
 
-#### 步驟 2：註冊並登入
+![image](../../../../images/post/post-10-2.jpg)
 
-會彈出瀏覽器視窗，可以連結 GitHub 帳號。
+以下說明 LIFF 表單
 
-```
-flyctl auth signup
-```
+- Size：這一項有三個值 Full、Tall、Compact，說明 LINE 打開 LIFF 時，他的大小要多大。
+  要注意的是，分享的按鈕只會在「Full」這個 Size 出現。   
 
-```
-flyctl auth login
-```
+- Endpoint URL ：使用者點擊了 LIFF 的連結，實際上 LIFF 是開啟了哪個頁面。
 
-#### 步驟 3：啟動既有專案
+- Scopes ：指的是我們想要取哪些資料，「chat_message.write」，這項是如果要用到主動幫使用者發訊息的 sendMessages 函式時，這邊就必須打勾，不然 sendMessages 就無法使用。
 
-cd 到專案後，下`flyctl launch`，輸入專案的名稱。
+- Add friend option ：當使用者要登入我們建立的 LIFF 時，要怎麼推薦他加入我們的 LINE。
 
-![image](../../../../images/post/post-8-1.jpg)
+- Scan QR ：指要不要使用 LIFF 的打開 QR code 掃描器功能。
 
-選擇 server region，我這邊選擇香港(Hong Kong)。
+#### 步驟 3：建立 LIFF 完成
 
-![image](../../../../images/post/post-8-2.jpg)
+建立完成後記得勾選`shareTargetPicker`，這項功能是主動讓使用者發送我們指定的訊息給他的好友。
 
-> 注意帳號一定要綁定信用卡才行用 ![image](../../../../images/post/post-8-3.jpg)
+`LIFF ID`這個要先記起來，之後寫 JS 用到。
 
-會問需要使用 DB 嗎?這裡就看需求了(剛好我這個專案需要)，我就選 Yes 。
+![image](../../../../images/post/post-10-3.jpg)
 
-![image](../../../../images/post/post-8-4.jpg)
+#### 步驟 4：LIFF 轉成公開
 
-![image](../../../../images/post/post-8-5.jpg)
+進到 LINE Developers 的後台，進到我們創建的 LIFF，會有一個「Developing」的按鈕，需要按下「Publish」就會轉成公開
 
-#### 步驟 4：開始部署
-
-```
-flyctl deploy
-```
-這時在終端機看到`succeeded`代表完成部署🎉
-
-![image](../../../../images/post/post-8-6.jpg)
-
-> 可以在終端機下`flyctl logs`除錯
-
-#### 步驟 5：訪問自己網站
-
-可以從`https://fly.io/dashboard`查看所建立的 APP ，裡面會有 Hostname。
-
-![image](../../../../images/post/post-8-7.jpg)
+![image](../../../../images/post/post-10-4.jpg)
 
 ### 結語
 
 ---
 
-Heroku 轉移至 Fly.io，讓我的小皮妞Bot復活，但要小心不要亂搞避免產生額外費用{{< target-blank url="https://fly.io/docs/about/pricing/#free-allowances" >}}參考{{< /target-blank >}}。
+主要是可以讓使用者用 Line 就可以快速分享該頁面。
