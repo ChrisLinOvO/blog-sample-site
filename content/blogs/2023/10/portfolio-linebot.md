@@ -144,7 +144,11 @@ npm i @line/bot-sdk express dotenv
 
 ### 回到 line 設定 webhook
 
-https://line-bot-xxxx.onrender.com/callback
+到{{< target-blank url="https://dashboard.render.com/" >}}dashboard{{< /target-blank >}}選擇想要的`services name`，進去後左上角會看見一串URL，這就是需要設定在 line webhook。
+
+![image](../../../../images/post/post-9-27.jpg)
+
+記得要加上`/callback`。
 
 ![image](../../../../images/post/post-9-18.jpg)
 
