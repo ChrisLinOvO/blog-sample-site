@@ -23,13 +23,15 @@ type: "post"
 
 ---
 
-之前在前公司有用到 Line shareTargetPicker API 的應用，用來發送訪客 QR code 給 Line 好友，這邊做一個簡單 Demo
+之前在前公司有用到 Line shareTargetPicker API 的應用，用來發送訪客 QR code 給 Line 好友，這邊做一個簡單 Demo，單純轉發文字及當前 URL 給好友。
 
-### 在 Ｆly.io 建立專案
+### 建立 LIFF
 
 ---
 
-#### 步驟 1：安裝 flyctl
+#### 步驟 1：
+
+![image](../../../../images/post/post-10-1.jpg)
 
 這裡教學以 macOS 為例，可參考 {{< target-blank url="https://fly.io/docs/hands-on/install-flyctl/#macos" >}}官網{{< /target-blank >}} 。
 

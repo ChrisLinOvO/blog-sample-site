@@ -15,6 +15,7 @@ categories:
 tags:
   - "Render"
   - "LineBot"
+  - "Line"
 
 # post type
 type: "post"
