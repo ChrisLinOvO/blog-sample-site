@@ -62,7 +62,7 @@ cd 到專案後，下`flyctl launch`，輸入專案的名稱。
 
 > 注意帳號一定要綁定信用卡才行用 ![image](../../../../images/post/post-8-3.jpg)
 
-會問需要使用 DB 嗎?這裡就看需求了(剛好我這個專案需要)，我就選 Yes {{< target-blank url="https://fly.io/docs/elixir/getting-started/migrate-from-heroku/#free-plans" >}}參考{{< /target-blank >}}。
+會問需要使用 DB 嗎?這裡就看需求了(剛好我這個專案需要)，我就選 Yes 。
 
 ![image](../../../../images/post/post-8-4.jpg)
 
