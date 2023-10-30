@@ -89,4 +89,4 @@ flyctl deploy
 
 ---
 
-Heroku 轉移至 Fly.io，讓我的皮皮Bot復活，但要小心不要亂搞避免產生額外費用{{< target-blank url="https://fly.io/docs/about/pricing/#free-allowances" >}}參考{{< /target-blank >}}。
+Heroku 轉移至 Fly.io，讓我的小皮妞Bot復活，但要小心不要亂搞避免產生額外費用{{< target-blank url="https://fly.io/docs/about/pricing/#free-allowances" >}}參考{{< /target-blank >}}。

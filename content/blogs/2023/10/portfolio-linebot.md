@@ -192,7 +192,7 @@ npm i @line/bot-sdk express dotenv
 
 ---
 
-Heroku 轉移至 Fly.io，讓我的皮皮Bot復活，但莫名其妙被多收錢，因此再轉移至 Render。
+Heroku 轉移至 Fly.io，讓我的小皮妞Bot復活，但莫名其妙被多收錢，因此再轉移至 Render。
 
 而 Render 優點：
 
