@@ -64,9 +64,19 @@ type: "post"
 
 #### 步驟 4：LIFF 轉成公開
 
-進到 LINE Developers 的後台，進到我們創建的 LIFF，會有一個「Developing」的按鈕，需要按下「Publish」就會轉成公開
+進到 LINE Developers 的後台，進到我們創建的 LIFF，會有一個`Developing`的按鈕，需要按下`Publish`就會轉成公開
 
 ![image](../../../../images/post/post-10-4.jpg)
+
+### 程式碼{{< target-blank url="https://developers.line.biz/en/reference/liff/#share-target-picker" >}}參考範例{{< /target-blank >}}
+
+---
+
+### Demo 影片
+
+---
+
+![自己的手機Line分享測試](../../../../images/post/post-10-5.gif)
 
 ### 結語
 
