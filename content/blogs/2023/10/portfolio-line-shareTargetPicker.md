@@ -23,13 +23,15 @@ type: "post"
 
 ---
 
-之前在前公司有用到 Line shareTargetPicker API 的應用，用來發送訪客 QR code 給 Line 好友，這邊做一個簡單 Demo，單純轉發文字及當前 URL 給好友。
+之前在前公司有用到 Line shareTargetPicker API 的應用，用來發送訪客 QR code 給 Line 好友，這邊做一個簡單 Demo，單純轉發當前 URL 給好友。
 
 ### 建立 LIFF
 
 ---
 
-#### 步驟 1：
+#### 步驟 1：進到 {{< target-blank url="https://developers.line.biz/zh-hant/" >}}developerse官網{{< /target-blank >}} 建立 channel
+
+選擇 Products，請選擇`LINE Login`，然後`Create a new channel`
 
 ![image](../../../../images/post/post-10-1.jpg)
 
