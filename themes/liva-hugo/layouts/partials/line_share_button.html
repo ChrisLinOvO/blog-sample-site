@@ -59,6 +59,9 @@
               liff
                 .init({ liffId: "2001397246-jbLPM3xw" })
                 .then(function () {
+                  if (!liff.isLoggedIn()) {
+                    liff.login(); // 如果用戶未登錄，提示用戶登錄
+                  }
                   // 使用 liff.shareTargetPicker 分享 URL 給 LINE 好友
                   liff.shareTargetPicker([
                     {
