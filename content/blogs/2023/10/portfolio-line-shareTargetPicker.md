@@ -4,7 +4,7 @@ date: 2023-10-30
 draft: false
 
 # post thumb
-image: "images/post/fly.io-logo.jpg"
+image: "images/post/share-target-picker-logo.jpg"
 
 # meta description
 description: "Line 分享當前頁面給好友"
