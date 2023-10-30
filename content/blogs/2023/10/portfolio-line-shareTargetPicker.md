@@ -1,7 +1,7 @@
 ---
 title: "Heroku 轉移至 Fly.io "
 date: 2023-10-29
-draft: false
+draft: true
 
 # post thumb
 image: "images/post/fly.io-logo.jpg"
