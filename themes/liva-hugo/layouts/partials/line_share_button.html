@@ -7,8 +7,7 @@
       /* 自定義分享按鈕的樣式 */
       #lineShareButton {
         position: fixed;
-        /* bottom: 20px; */
-        top: 20px;
+        bottom: 20px;
         right: 20px;
         cursor: pointer;
         display: flex;
@@ -66,30 +65,35 @@
               login: "required",
             })
             .then(() => {
-              liff.getProfile().then((profile) => {
-                const nickname = profile.displayName;
-                const shareText = `好友 ${nickname} 分享了這個連結😊: ${currentUrl}`;
-                // 使用 LIFF 分享
-                if (liff.isApiAvailable("shareTargetPicker")) {
-                  liff
-                    .shareTargetPicker([
-                      {
-                        type: "text",
-                        text: shareText,
-                      },
-                    ])
-                    .then((res) => {
-                      console.log("在 Line 客户端中分享成功", res);
-                    })
-                    .catch((error) => {
-                      console.error("在 Line 客户端中分享失敗", error);
-                    });
-                } else {
-                  alert(
-                    "你的 LINE App 暫時不支援 Share Target Picker ，將開始外部瀏覽器。"
-                  );
-                }
-              });
+              liff
+                .getProfile()
+                .then((profile) => {
+                  const nickname = profile.displayName;
+                  const shareText = `好友 ${nickname} 分享了這個連結😊: ${currentUrl}`;
+                  // 使用 LIFF 分享
+                  if (liff.isApiAvailable("shareTargetPicker")) {
+                    liff
+                      .shareTargetPicker([
+                        {
+                          type: "text",
+                          text: shareText,
+                        },
+                      ])
+                      .then((res) => {
+                        console.log("在 Line 客户端中分享成功", res);
+                      })
+                      .catch((error) => {
+                        console.error("在 Line 客户端中分享失敗", error);
+                      });
+                  } else {
+                    alert(
+                      "你的 LINE App 暫時不支援 Share Target Picker ，將開始外部瀏覽器。"
+                    );
+                  }
+                })
+                .catch((error) => {
+                  console.error("無法取得用戶資料:", error);
+                });
             })
             .catch((error) => {
               console.error("LIFF 初始化失败:", error);
