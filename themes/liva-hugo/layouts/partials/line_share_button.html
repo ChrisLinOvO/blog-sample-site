@@ -3,6 +3,13 @@
   <head>
     <!-- 加載 LINE LIFF SDK -->
     <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+    <script>
+      async function initializeLiff() {
+        await liff.init({ liffId: '2001397246-jbLPM3xw' });
+      }
+    
+      initializeLiff();
+    </script>
     <style>
       /* 自定義分享按鈕的樣式 */
       #lineShareButton {
@@ -29,15 +36,31 @@
     <!-- 分享按鈕 -->
     <div id="lineShareButton">
       <button
-        onclick="shareToLINE()"
         style="background: none; border: none; cursor: pointer"
       >
         <img src="/images/line-icon.png" alt="LINE APP 圖片" />
         <p>分享好友</p>
       </button>
     </div>
-
     <script>
+      document.getElementById('lineShareButton').addEventListener('click', () => {
+        if (liff.isInClient()) {
+          liff.shareTargetPicker([{
+            type: 'text',
+            text: window.location.href
+          }])
+          .then(() => {
+            console.log('分享成功');
+          })
+          .catch((error) => {
+            console.error('分享失败', error);
+          });
+        } else {
+          console.log('请在Line客户端中使用此功能。');
+        }
+      });
+    </script>
+    <!-- <script>
       // 獲取分享按鈕元素
       const shareButton = document.getElementById("lineShareButton");
 
@@ -59,9 +82,9 @@
 
         // 獲取當前網頁的 URL
         const currentURL = window.location.href;
-        console.log("=== in mobile");
         // 使用 LINE 分享功能分享 URL
         if (isMobile) {
+          console.log("=== in mobile");
           // 如果是手機，使用 LINE LIFF
           if (typeof liff !== "undefined") {
             liff
@@ -77,8 +100,7 @@
                   {
                     type: "url",
                     text: "分享的網頁",
-                    value:
-                      "https://liff.line.me/2001397246-jbLPM3xw" + currentURL,
+                    value: currentURL,
                   },
                 ]);
               })
@@ -91,6 +113,6 @@
           window.open("https://lineit.line.me/share/ui?url=" + currentURL);
         }
       }
-    </script>
+    </script> -->
   </body>
 </html>
