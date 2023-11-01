@@ -87,9 +87,8 @@
                         window.location.href = `https://lineit.line.me/share/ui?url=${currentUrl}`;
                       });
                   } else {
-                    alert(
-                      "你的 LINE App 暫時不支援 Share Target Picker ，將開始外部瀏覽器。"
-                    );
+                    console.error("你的 LINE App 暫時不支援 Share Target Picker ，將開啟外部瀏覽器。");
+                    window.location.href = `https://lineit.line.me/share/ui?url=${currentUrl}`;
                   }
                 })
                 .catch((error) => {
