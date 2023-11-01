@@ -96,7 +96,7 @@
                 })
                 .catch((error) => {
                   console.error("無法取得用戶資料:", error);
-                  liff.login();
+                  window.location.href = externalUrl;
                 });
             })
             .catch((error) => {
