@@ -66,14 +66,15 @@
         if (typeof liff !== "undefined" && isMobileUser()) {
           console.log("isMobile");
           // 取得 Line 好友信息
-          liff.getProfile().then((profile) => {
-            console.log("profile", profile);
-            const nickname = profile.displayName;
-            const shareText = `好友 ${nickname} 分享了這個連結😊: ${currentURL}`;
-            // 使用 LIFF 分享
-            if (liff.isApiAvailable("shareTargetPicker")) {
+          liff.permanentLink.createUrl().then((url) => {
+            liff.getProfile().then((profile) => {
+              console.log("profile", profile);
+              const nickname = profile.displayName;
+              const shareText = `好友 ${nickname} 分享了這個連結😊: ${url}`;
+              // 使用 LIFF 分享
               console.log("shareText", shareText);
-              liff.shareTargetPicker([
+              liff
+                .shareTargetPicker([
                   {
                     type: "text",
                     text: shareText,
@@ -85,19 +86,11 @@
                 .catch((error) => {
                   console.error("在 Line 客户端中分享失敗", error);
                 });
-            } else {
-              alert(
-                "你的 LINE App 暫時不支援 Share Target Picker ，將開始外部瀏覽器。"
-              );
-              liff.openWindow({
-                url: "https://lineit.line.me/share/ui?url=" + currentURL,
-                external: true,
-              });
-            }
+            });
           });
         } else {
           // 如果是網頁，使用 LINE Web Share Button
-          // window.open("https://lineit.line.me/share/ui?url=" + currentURL);
+          window.open("https://lineit.line.me/share/ui?url=" + currentURL);
         }
       });
     </script>
