@@ -53,11 +53,16 @@
           shareButton.style.display = "flex"; // 否則顯示按鈕
         }
       });
+
+      function isMobileUser() {
+        return /Mobile|Mobi/i.test(navigator.userAgent);
+      }
+
       shareButton.addEventListener("click", () => {
         // 獲取當前網頁的 URL
         const currentURL = window.location.href;
         // 判断用戶環境，如果在Line客户端中，使用LIFF分享
-        if (typeof liff !== "undefined" && liff.isInClient()) {
+        if (typeof liff !== "undefined" && isMobileUser()) {
           // 取得 Line 好友信息
           liff.getProfile().then((profile) => {
             const nickname = profile.displayName;
