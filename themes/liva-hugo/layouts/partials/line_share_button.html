@@ -38,23 +38,24 @@
     </div>
 
     <script>
+      // 獲取分享按鈕元素
+      const shareButton = document.getElementById("lineShareButton");
+
+      window.addEventListener("scroll", function () {
+        var scrollY = window.scrollY || window.pageYOffset;
+        if (scrollY > 100) {
+          // 頁面滾動大於100像素隱藏
+          shareButton.style.display = "none";
+        } else {
+          shareButton.style.display = "flex"; // 否則顯示按鈕
+        }
+      });
+
       function shareToLINE() {
         // 檢查用戶訪問設備，如果是手機，啟用 LINE LIFF
-        var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
           navigator.userAgent
         );
-
-        // 獲取分享按鈕元素
-        var shareButton = document.getElementById("lineShareButton");
-
-        window.addEventListener("scroll", function() {
-            var scrollY = window.scrollY || window.pageYOffset;
-            if (scrollY > 100) { // 当页面滚动距离大于100像素时隐藏按钮
-                shareButton.style.display = "none";
-            } else {
-                shareButton.style.display = "flex"; // 否则显示按钮
-            }
-        });
 
         // 添加點擊事件監聽器
         shareButton.addEventListener("click", function () {
@@ -92,8 +93,6 @@
           }
         });
       }
-
-     
     </script>
   </body>
 </html>
