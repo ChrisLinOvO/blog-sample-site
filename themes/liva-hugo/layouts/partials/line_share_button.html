@@ -47,6 +47,19 @@
         // 獲取分享按鈕元素
         var shareButton = document.getElementById("lineShareButton");
 
+        var scrollPosition = 0; // 记录上次滚动位置
+    window.addEventListener("scroll", function() {
+        var scrollY = window.scrollY || window.pageYOffset;
+        if (scrollY > scrollPosition) {
+            // 用户向下滚动，隐藏按钮
+            shareButton.style.display = "none";
+        } else {
+            // 用户向上滚动，显示按钮
+            shareButton.style.display = "flex";
+        }
+        scrollPosition = scrollY;
+    });
+
         // 添加點擊事件監聽器
         shareButton.addEventListener("click", function () {
           // 獲取當前網頁的 URL
@@ -63,15 +76,15 @@
                     liff.login(); // 如果用戶未登錄，提示用戶登錄
                   }
                   // 使用 liff.shareTargetPicker 分享 URL 給 LINE 好友
-                  window.location.href =
-                    "https://lineit.line.me/share/ui?url=" + currentURL;
-                  // liff.shareTargetPicker([
-                  //   {
-                  //     type: "url",
-                  //     title: "分享的網頁",
-                  //     url: "https://lineit.line.me/share/ui?url=" + currentURL,
-                  //   },
-                  // ]);
+                  // window.location.href =
+                  //   "https://lineit.line.me/share/ui?url=" + currentURL;
+                  liff.shareTargetPicker([
+                    {
+                      type: "url",
+                      title: "分享的網頁",
+                      value: "https://lineit.line.me/share/ui?url=" + currentURL,
+                    },
+                  ]);
                 })
                 .catch(function (error) {
                   console.error(error);
@@ -83,6 +96,8 @@
           }
         });
       }
+
+     
     </script>
   </body>
 </html>
