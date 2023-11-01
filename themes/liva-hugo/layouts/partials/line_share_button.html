@@ -75,22 +75,13 @@
                   // 使用 liff.shareTargetPicker 分享 URL 給 LINE 好友
                   // window.location.href =
                   //   "https://lineit.line.me/share/ui?url=" + currentURL;
-                  liff.shareTargetPicker(
-                    [
-                      {
-                        type: "text",
-                        text: "Hello, World!",
-                      },
-                      // {
-                      //   type: "url",
-                      //   text: "分享的網頁",
-                      //   value: currentURL,
-                      // },
-                    ],
+                  liff.shareTargetPicker([
                     {
-                      isMultiple: true,
+                      type: "url",
+                      text: "分享的網頁",
+                      value: "https://liff.line.me/2001397246-jbLPM3xw" + currentURL,
                     }
-                  );
+                  ]);
                 })
                 .catch(function (error) {
                   console.error(error);
