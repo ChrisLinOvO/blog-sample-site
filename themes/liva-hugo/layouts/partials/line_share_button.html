@@ -37,6 +37,7 @@
       // 獲取分享按鈕元素
       const shareButton = document.getElementById("lineShareButton");
       const currentUrl = window.location.href;
+      const externalUrl = `https://lineit.line.me/share/ui?url=${currentUrl}`;
 
       window.addEventListener("scroll", function () {
         var scrollY = window.scrollY || window.pageYOffset;
@@ -84,11 +85,11 @@
                       })
                       .catch((error) => {
                         console.error("在 Line 客户端中分享失敗", error);
-                        window.location.href = `https://lineit.line.me/share/ui?url=${currentUrl}`;
+                        window.location.href = externalUrl;
                       });
                   } else {
                     console.error("你的 LINE App 暫時不支援 Share Target Picker ，將開啟外部瀏覽器。");
-                    window.location.href = `https://lineit.line.me/share/ui?url=${currentUrl}`;
+                    window.location.href = externalUrl;
                   }
                 })
                 .catch((error) => {
@@ -100,7 +101,7 @@
             });
         } else {
           // 如果是網頁，使用 LINE Web Share Button
-          window.open(`https://lineit.line.me/share/ui?url=${currentUrl}`);
+          window.open(externalUrl);
         }
       });
     </script>
