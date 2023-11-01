@@ -69,26 +69,32 @@
           //     url: window.location.href,
           //   })
           //   .then((url) => {
-          liff.getProfile().then((profile) => {
-            console.log("profile", profile);
-            const nickname = profile.displayName;
-            const shareText = `好友 ${nickname} 分享了這個連結😊: https://chrislinovo.github.io/about/`;
-            // 使用 LIFF 分享
-            console.log("shareText", shareText);
-            liff
-              .shareTargetPicker([
-                {
-                  type: "text",
-                  text: shareText,
-                },
-              ])
-              .then(() => {
-                console.log("在 Line 客户端中分享成功");
-              })
-              .catch((error) => {
-                console.error("在 Line 客户端中分享失敗", error);
-              });
-          });
+          if (liff.isApiAvailable("shareTargetPicker")) {
+            liff.getProfile().then((profile) => {
+              console.log("profile", profile);
+              const nickname = profile.displayName;
+              const shareText = `好友 ${nickname} 分享了這個連結😊: https://chrislinovo.github.io/about/`;
+              // 使用 LIFF 分享
+              console.log("shareText", shareText);
+              liff
+                .shareTargetPicker([
+                  {
+                    type: "text",
+                    text: shareText,
+                  },
+                ])
+                .then(() => {
+                  console.log("在 Line 客户端中分享成功");
+                })
+                .catch((error) => {
+                  console.error("在 Line 客户端中分享失敗", error);
+                });
+            });
+          } else {
+            alert(
+              "你的 LINE App 暫時不支援 Share Target Picker ，將開始外部瀏覽器。"
+            );
+          }
           // });
         } else {
           // 如果是網頁，使用 LINE Web Share Button
