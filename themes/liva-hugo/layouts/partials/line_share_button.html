@@ -75,8 +75,8 @@
                     liff
                       .shareTargetPicker([
                         {
-                          type: "url",
-                          url: currentUrl,
+                          type: "text",
+                          text: shareText,
                         },
                       ])
                       .then((res) => {
@@ -84,6 +84,7 @@
                       })
                       .catch((error) => {
                         console.error("在 Line 客户端中分享失敗", error);
+                        window.location.href = `https://lineit.line.me/share/ui?url=${currentUrl}`;
                       });
                   } else {
                     alert(
