@@ -37,9 +37,9 @@
       // 獲取分享按鈕元素
       const shareButton = document.getElementById("lineShareButton");
       const currentUrl = window.location.href;
-      const externalUrl = `https://lineit.line.me/share/ui?url=${encodeURIComponent(
-        currentUrl
-      )}`;
+      const externalUrl = `https://lineit.line.me/share/ui?url=${encodeURIComponent(currentUrl)}&text=${encodeURIComponent(customText)}`;
+      // 自定义文本
+      const customText = "來自您的好友分享";
 
       window.addEventListener("scroll", function () {
         var scrollY = window.scrollY || window.pageYOffset;
