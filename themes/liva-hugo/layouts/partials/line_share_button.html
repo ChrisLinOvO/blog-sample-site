@@ -87,6 +87,7 @@
                   console.log("在 Line 客户端中分享成功");
                 })
                 .catch((error) => {
+                  console.log("error ", shareText);
                   console.error("在 Line 客户端中分享失敗", error);
                 });
             });
