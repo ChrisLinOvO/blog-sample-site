@@ -67,11 +67,9 @@
             })
             .then(() => {
               liff.getProfile().then((profile) => {
-                console.log("profile", profile);
                 const nickname = profile.displayName;
                 const shareText = `好友 ${nickname} 分享了這個連結😊: ${currentUrl}`;
                 // 使用 LIFF 分享
-                console.log("shareText", shareText);
                 if (liff.isApiAvailable("shareTargetPicker")) {
                   liff
                     .shareTargetPicker([
@@ -80,11 +78,10 @@
                         text: shareText,
                       },
                     ])
-                    .then(() => {
-                      console.log("在 Line 客户端中分享成功");
+                    .then((res) => {
+                      console.log("在 Line 客户端中分享成功", res);
                     })
                     .catch((error) => {
-                      console.log("error ", shareText);
                       console.error("在 Line 客户端中分享失敗", error);
                     });
                 } else {
