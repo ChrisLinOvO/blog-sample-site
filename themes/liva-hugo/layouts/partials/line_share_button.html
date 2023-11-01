@@ -47,18 +47,14 @@
         // 獲取分享按鈕元素
         var shareButton = document.getElementById("lineShareButton");
 
-        var scrollPosition = 0; // 记录上次滚动位置
-    window.addEventListener("scroll", function() {
-        var scrollY = window.scrollY || window.pageYOffset;
-        if (scrollY > scrollPosition) {
-            // 用户向下滚动，隐藏按钮
-            shareButton.style.display = "none";
-        } else {
-            // 用户向上滚动，显示按钮
-            shareButton.style.display = "flex";
-        }
-        scrollPosition = scrollY;
-    });
+        window.addEventListener("scroll", function() {
+            var scrollY = window.scrollY || window.pageYOffset;
+            if (scrollY > 100) { // 当页面滚动距离大于100像素时隐藏按钮
+                shareButton.style.display = "none";
+            } else {
+                shareButton.style.display = "flex"; // 否则显示按钮
+            }
+        });
 
         // 添加點擊事件監聽器
         shareButton.addEventListener("click", function () {
