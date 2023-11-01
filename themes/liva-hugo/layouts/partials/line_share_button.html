@@ -58,65 +58,30 @@
         const currentURL = window.location.href;
         // 判断用戶環境，如果在Line客户端中，使用LIFF分享
         if (typeof liff !== "undefined" && liff.isInClient()) {
-          liff
-            .shareTargetPicker([
-              {
-                type: "text",
-                text: currentURL,
-              },
-            ])
-            .then(() => {
-              console.log("在Line客户端中分享成功");
-            })
-            .catch((error) => {
-              console.error("在Line客户端中分享失敗", error);
-            });
+          // 取得 Line 好友信息
+          liff.getProfile().then((profile) => {
+            const nickname = profile.displayName;
+            const shareText = `好友 ${nickname} 分享了這個連結😊: ${currentURL}`;
+            // 使用 LIFF 分享
+            liff
+              .shareTargetPicker([
+                {
+                  type: "text",
+                  text: currentURL,
+                },
+              ])
+              .then(() => {
+                console.log("在 Line 客户端中分享成功");
+              })
+              .catch((error) => {
+                console.error("在 Line 客户端中分享失敗", error);
+              });
+          });
         } else {
           // 如果是網頁，使用 LINE Web Share Button
           window.open("https://lineit.line.me/share/ui?url=" + currentURL);
         }
       });
     </script>
-    <!-- <script>    
-      function shareToLINE() {
-        // 檢查用戶訪問設備，如果是手機，啟用 LINE LIFF
-        const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-          navigator.userAgent
-        );
-
-        // 獲取當前網頁的 URL
-        const currentURL = window.location.href;
-        // 使用 LINE 分享功能分享 URL
-        if (isMobile) {
-          console.log("=== in mobile");
-          // 如果是手機，使用 LINE LIFF
-          if (typeof liff !== "undefined") {
-            liff
-              .init({ liffId: "2001397246-jbLPM3xw" })
-              .then(function () {
-                if (!liff.isLoggedIn()) {
-                  liff.login(); // 如果用戶未登錄，提示用戶登錄
-                }
-                // 使用 liff.shareTargetPicker 分享 URL 給 LINE 好友
-                // window.location.href =
-                //   "https://lineit.line.me/share/ui?url=" + currentURL;
-                liff.shareTargetPicker([
-                  {
-                    type: "url",
-                    text: "分享的網頁",
-                    value: currentURL,
-                  },
-                ]);
-              })
-              .catch(function (error) {
-                console.error(error);
-              });
-          }
-        } else {
-          // 如果是網頁，使用 LINE Web Share Button
-          window.open("https://lineit.line.me/share/ui?url=" + currentURL);
-        }
-      }
-    </script> -->
   </body>
 </html>
