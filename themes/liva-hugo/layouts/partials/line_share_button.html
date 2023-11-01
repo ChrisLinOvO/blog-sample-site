@@ -14,7 +14,8 @@
       /* 自定義分享按鈕的樣式 */
       #lineShareButton {
         position: fixed;
-        bottom: 20px;
+        /* bottom: 20px; */
+        top:20px;
         right: 20px;
         cursor: pointer;
         display: flex;
@@ -63,8 +64,10 @@
         const currentURL = window.location.href;
         // 判断用戶環境，如果在Line客户端中，使用LIFF分享
         if (typeof liff !== "undefined" && isMobileUser()) {
+          console.log('isMobile')
           // 取得 Line 好友信息
           liff.getProfile().then((profile) => {
+            console.log('profile', profile)
             const nickname = profile.displayName;
             const shareText = `好友 ${nickname} 分享了這個連結😊: ${currentURL}`;
             // 使用 LIFF 分享
