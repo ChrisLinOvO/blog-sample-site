@@ -16,7 +16,7 @@ tags:
   - "LineBot"
   - "Line"
   - "Ngrok"
-  - "React"
+  - "React.js"
   - "Feathers"
 
 # post type
