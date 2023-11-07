@@ -27,7 +27,7 @@ type: "post"
 
 {{< target-blank url="https://react-hooks-testing-library.com/" >}}React Hooks Testing Library{{< /target-blank >}}  主要提供三個方法：`renderHook`、`act`、`cleanup`。
 
-### 什麼時候該用此 Library {{< target-blank url="https://react-hooks-testing-library.com/#the-solution" >}}官方Solution{{< /target-blank >}} 
+##### 什麼時候該用此 Library {{< target-blank url="https://react-hooks-testing-library.com/#the-solution" >}}官方Solution{{< /target-blank >}} 
 
 1. 使用
 
@@ -39,6 +39,7 @@ type: "post"
     - Hook 只給某對應的元件使用時
     - Hook 非常容易測試，只需要直接針對元件進行測試即可
  
+---
 
 ### renderHook
 
