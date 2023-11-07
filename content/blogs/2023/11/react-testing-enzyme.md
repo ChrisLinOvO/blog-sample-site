@@ -4,7 +4,7 @@ date: 2023-11-07T18:00:00+08:00
 draft: false
 
 # post thumb
-image: "images/post/enzyme-logo.jpg"
+image: "images/post/react-enzyme-logo.jpg"
 
 # meta description
 description: "使用此 Enzyme 重點筆記"

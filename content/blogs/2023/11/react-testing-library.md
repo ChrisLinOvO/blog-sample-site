@@ -4,7 +4,7 @@ date: 2023-11-07T16:00:00+08:00
 draft: false
 
 # post thumb
-image: "images/post/react-testing-library-logo.jpg"
+image: "images/post/react-testing-library-logo.png"
 
 # meta description
 description: "使用此 library 重點筆記"
