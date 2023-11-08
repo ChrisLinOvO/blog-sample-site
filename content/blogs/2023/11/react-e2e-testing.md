@@ -1,6 +1,6 @@
 ---
 title: "End-to-End (E2E) Testing"
-date: 2023-11-08
+date: 2023-11-08T10:00:00+08:00
 draft: false
 
 # post thumb
