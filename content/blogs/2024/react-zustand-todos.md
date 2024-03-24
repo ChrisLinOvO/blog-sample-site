@@ -31,7 +31,7 @@ type: "post"
 
 ---
 
-現在 react 的相關套件裡面最使用最廣泛的全域管理工具應該是 Redux，在工作上較大的專案也都是使用 Redux 在做狀態管理，但是我想要介紹另外一個比較輕量狀態管理工具，Zustand。
+現在 react 的相關套件裡面最使用最廣泛的全域管理工具應該是 Redux，在工作上較大的專案也都是使用 Redux 在做狀態管理，但是我想要介紹另外一個比較輕量狀態管理工具，Zustand {{< target-blank url="https://docs.pmnd.rs/zustand/getting-started/introduction" >}}官方文件{{< /target-blank >}}。
 
 > npm install zustand
 
